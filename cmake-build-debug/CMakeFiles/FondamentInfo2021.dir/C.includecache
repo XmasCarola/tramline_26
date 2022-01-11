@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/chahna/CLionProjects/FondamentInfo2021/bool.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+limits.h
+-
+
+/home/chahna/CLionProjects/FondamentInfo2021/tramline.c
+bool.h
+/home/chahna/CLionProjects/FondamentInfo2021/bool.h
+
