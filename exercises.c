@@ -531,15 +531,7 @@ void bubblesort(struct record * W, int N, int * first, float error) {
         position = first;
         for(count = 0, swap_found = FALSE; count<N-1-iter; count++) {
             if(W[*position].number>W[W[*position].next].number && !is_equal(W[*position].number, W[W[*position].next].number, error)) {
-                if(*position != *first)
-                    swap_floatIASL(W, position);
-                else {
-                    tmp1 = W[W[*position].next].next;
-                    tmp2 = W[*position].next;
-                    W[W[*position].next].next = *position;
-                    W[*position].next = tmp1;
-                    *first = tmp2;
-                }
+                swap_floatIASL(W, position);
                 swap_found = TRUE;
             }
             position = &(W[*position].next);
@@ -910,25 +902,6 @@ int solution() {
     printf("\n> Ex. 4 <\n");
     swap_equals_bis(&floatArray, num1, num2);
     float_visitIASL(&floatArray);
-
-
-
-//    init_sequential_list(&sequentialList, L);
-//    int index;
-//    for(index=0; index<11; index++) {
-//        suf_insertSL(&sequentialList, A[index]);
-//    }
-//    visit_SL(&sequentialList);
-//    printf("\ntail %d", sequentialList.tail);
-////    pre_insertSL(&sequentialList, 34);
-////    pre_insertSL(&sequentialList, 76);
-////    pre_insertSL(&sequentialList, 62);
-//    printf("\nhead %d", sequentialList.head);
-//    printf("\nlength %d", (sequentialList.tail+sequentialList.size-sequentialList.head)%sequentialList.size);
-//    visit_SL(&sequentialList);
-//    quicksort(&sequentialList, sequentialList.head, sequentialList.tail);
-//    visit_SL(&sequentialList);
-//    invertSL(&sequentialList);
 
 }
 

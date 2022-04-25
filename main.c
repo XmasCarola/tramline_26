@@ -5,10 +5,10 @@ int main() {
 
 //    printf("\n-->> Intro <<--\n");
 //    intro();
-//    printf("\n-->> Exercises <<--\n");
+    printf("\n-->> Exercises <<--\n");
 //    carpark();
 //    tramline();
-//    solution();
+    solution();
     printf("\n-->> FondInf Exam 21.04.2022 <<--\n");
     exam();
 
