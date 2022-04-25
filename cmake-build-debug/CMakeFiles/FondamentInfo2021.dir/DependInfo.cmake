@@ -9,6 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/chahna/CLionProjects/FondamentInfo2021/carpark.c" "/home/chahna/CLionProjects/FondamentInfo2021/cmake-build-debug/CMakeFiles/FondamentInfo2021.dir/carpark.c.o"
+  "/home/chahna/CLionProjects/FondamentInfo2021/exam.c" "/home/chahna/CLionProjects/FondamentInfo2021/cmake-build-debug/CMakeFiles/FondamentInfo2021.dir/exam.c.o"
+  "/home/chahna/CLionProjects/FondamentInfo2021/exercises.c" "/home/chahna/CLionProjects/FondamentInfo2021/cmake-build-debug/CMakeFiles/FondamentInfo2021.dir/exercises.c.o"
+  "/home/chahna/CLionProjects/FondamentInfo2021/intro.c" "/home/chahna/CLionProjects/FondamentInfo2021/cmake-build-debug/CMakeFiles/FondamentInfo2021.dir/intro.c.o"
   "/home/chahna/CLionProjects/FondamentInfo2021/main.c" "/home/chahna/CLionProjects/FondamentInfo2021/cmake-build-debug/CMakeFiles/FondamentInfo2021.dir/main.c.o"
   "/home/chahna/CLionProjects/FondamentInfo2021/tramline.c" "/home/chahna/CLionProjects/FondamentInfo2021/cmake-build-debug/CMakeFiles/FondamentInfo2021.dir/tramline.c.o"
   )

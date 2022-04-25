@@ -15,8 +15,14 @@ string.h
 -
 limits.h
 -
+math.h
+-
 
-/home/chahna/CLionProjects/FondamentInfo2021/tramline.c
+/home/chahna/CLionProjects/FondamentInfo2021/importFiles.h
+
+/home/chahna/CLionProjects/FondamentInfo2021/main.c
+importFiles.h
+/home/chahna/CLionProjects/FondamentInfo2021/importFiles.h
 bool.h
 /home/chahna/CLionProjects/FondamentInfo2021/bool.h
 

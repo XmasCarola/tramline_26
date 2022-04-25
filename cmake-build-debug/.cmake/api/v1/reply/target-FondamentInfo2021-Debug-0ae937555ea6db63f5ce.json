@@ -54,7 +54,10 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3,
+				4,
+				5
 			]
 		}
 	],
@@ -89,7 +92,10 @@
 			[
 				0,
 				1,
-				2
+				2,
+				3,
+				4,
+				5
 			]
 		}
 	],
@@ -104,6 +110,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
+			"path" : "intro.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
 			"path" : "carpark.c",
 			"sourceGroupIndex" : 0
 		},
@@ -111,6 +123,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "tramline.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "exercises.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "exam.c",
 			"sourceGroupIndex" : 0
 		}
 	],

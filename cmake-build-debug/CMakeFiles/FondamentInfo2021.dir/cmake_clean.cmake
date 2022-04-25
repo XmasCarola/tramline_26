@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/FondamentInfo2021.dir/carpark.c.o"
+  "CMakeFiles/FondamentInfo2021.dir/exam.c.o"
+  "CMakeFiles/FondamentInfo2021.dir/exercises.c.o"
+  "CMakeFiles/FondamentInfo2021.dir/intro.c.o"
   "CMakeFiles/FondamentInfo2021.dir/main.c.o"
   "CMakeFiles/FondamentInfo2021.dir/tramline.c.o"
   "FondamentInfo2021"
