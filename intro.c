@@ -325,4 +325,6 @@ int intro() {
     printf("\n>>> From indexes_array_list to singly_linked_list <<<\n");
     visitSLL(&(*fromIASLtoSLLPointer));
 
+    return 0;
+
 }
