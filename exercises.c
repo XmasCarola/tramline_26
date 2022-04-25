@@ -896,9 +896,7 @@ int solution() {
     printf("\n/* 2022-02-23 */\n");
     printf("\n> Ex. 3 <\n");
     Boolean included = seq_list_inclusion(&sequentialList, &shortSeqList, P, G);
-    (included) ? printf("\nThe second list is included\n") : printf("\nThe second list is not included\n");
-
-    printf("\n/* 2022-02-23 */\n");
+    (included) ? printf("\nThe second list is included.\n") : printf("\nThe second list is not included.\n");
     printf("\n> Ex. 4 <\n");
     swap_equals_bis(&floatArray, num1, num2);
     float_visitIASL(&floatArray);
