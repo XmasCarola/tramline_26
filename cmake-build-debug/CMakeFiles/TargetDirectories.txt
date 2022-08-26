@@ -1,3 +1,0 @@
-/home/chahna/CLionProjects/FondamentInfo2021/cmake-build-debug/CMakeFiles/FondamentInfo2021.dir
-/home/chahna/CLionProjects/FondamentInfo2021/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/chahna/CLionProjects/FondamentInfo2021/cmake-build-debug/CMakeFiles/rebuild_cache.dir
