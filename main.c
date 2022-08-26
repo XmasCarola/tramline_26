@@ -7,8 +7,8 @@ int main() {
 //    intro();
     printf("\n-->> Exercises <<--\n");
 //    carpark();
-//    tramline();
-    solution();
+    tramline();
+//    solution();
     printf("\n-->> FondInf Exam 21.04.2022 <<--\n");
     exam();
 

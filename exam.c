@@ -270,6 +270,7 @@ int exam() {
     swap_equals(&IASL, n1, n2);
     printf("\nFinal list: ");
     visit_ind_list(&IASL);
+    printf("\nNumbers at position %d and %d have been swapped.\n", n1, n2);
 
     printf("\n> Ex. 5 <\n");
     init_pointer_list(&L);
