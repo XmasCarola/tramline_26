@@ -313,14 +313,14 @@ int tramline() {
     int distances[] = {950, 550, 1000, 2000, 750, 950};
     int time_gaps[] = {3, 2, 2, 3, 1, 3};
     char allowed_directions[2][10] = {"inbound", "outbound"};
-    int outbound_timetable[7] = {2006, 2021, 2040, 2100, 2120, 2140, 2200};
-    int inbound_timetable[7] = {742, 757, 812, 827, 842, 857, 912};
+    int outboundTimetable[7] = {2006, 2021, 2040, 2100, 2120, 2140, 2200};
+    int inboundTimetable[7] = {742, 757, 812, 827, 842, 857, 912};
     struct tramline_26 tw3ntySix;
-    struct tramline_26 *tramline_ptr = &tw3ntySix;
-    int S = 7, k, start_index, end_index, max_time_gap = 0, last_time;
+    struct tramline_26 *tramlinePtr = &tw3ntySix;
+    int S = 7, k, startIndex, endIndex, maxTimeGap = 0, lastTime;
     long deadline;
-    char selected_stop[81], destination[81], selected_direction;
-    *selected_stop = '\0';
+    char selectedStop[81], destination[81], selectedDirection;
+    *selectedStop = '\0';
 
     printf("\n--Tramline--\n");
 
@@ -328,37 +328,37 @@ int tramline() {
     for (k = 0; k < S; k++) {
         printf("%s | ", stops[k]);
         if (k > 0)
-            max_time_gap += time_gaps[k - 1];
+            maxTimeGap += time_gaps[k - 1];
     }
-    get_station(selected_stop, S, stops, &start_index, 0, selected_direction);
-    printf("\nYour station is: %s", selected_stop);
-    get_direction(&selected_direction, allowed_directions, (sizeof(allowed_directions) / sizeof(allowed_directions[0])),
-                  &start_index, S);
-    init_tramline_vector(tramline_ptr, S, &selected_direction);
+    get_station(selectedStop, S, stops, &startIndex, 0, selectedDirection);
+    printf("\nYour station is: %s", selectedStop);
+    get_direction(&selectedDirection, allowed_directions, (sizeof(allowed_directions) / sizeof(allowed_directions[0])),
+                  &startIndex, S);
+    init_tramline_vector(tramlinePtr, S, &selectedDirection);
     printf("\n\n#########################");
     printf("\n        TIMETABLE        \n");
     printf("#########################");
-    if (selected_direction == 'I')
-        create_vector_stations(tramline_ptr, stops, S, (sizeof(inbound_timetable) / sizeof(inbound_timetable[0])),
-                               inbound_timetable, selected_direction, time_gaps, max_time_gap);
+    if (selectedDirection == 'I')
+        create_vector_stations(tramlinePtr, stops, S, (sizeof(inboundTimetable) / sizeof(inboundTimetable[0])),
+                               inboundTimetable, selectedDirection, time_gaps, maxTimeGap);
     else
-        create_vector_stations(tramline_ptr, stops, S, (sizeof(outbound_timetable) / sizeof(outbound_timetable[0])),
-                               outbound_timetable, selected_direction, time_gaps, max_time_gap);
+        create_vector_stations(tramlinePtr, stops, S, (sizeof(outboundTimetable) / sizeof(outboundTimetable[0])),
+                               outboundTimetable, selectedDirection, time_gaps, maxTimeGap);
     printf("\n\n");
     for (k = 0; k < S; k++) {
-        printf("\nStop[%d]: %s", k, tramline_ptr->buffer[k].name);
+        printf("\nStop[%d]: %s", k, tramlinePtr->buffer[k].name);
     }
     printf("\n");
-    generate_route(tramline_ptr, start_index, S, distances);
+    generate_route(tramlinePtr, startIndex, S, distances);
     //visit_timetable(tramline_ptr->buffer[start_index].timetable_ptr);
-    get_station(destination, S, stops, &end_index, start_index, selected_direction);
-    get_deadline(&deadline, selected_direction);
-    last_time = get_last_time(tramline_ptr->buffer[start_index], tramline_ptr->buffer[end_index], deadline);
-    if (last_time == -1)
+    get_station(destination, S, stops, &endIndex, startIndex, selectedDirection);
+    get_deadline(&deadline, selectedDirection);
+    lastTime = get_last_time(tramlinePtr->buffer[startIndex], tramlinePtr->buffer[endIndex], deadline);
+    if (lastTime == -1)
         printf("\nThere are no trams available.\n");
     else
         printf("\nThe last available ride to reach %s before %ld leaves at %d from %s.\n", destination, deadline,
-               last_time, selected_stop);
+               lastTime, selectedStop);
     //fputs(&selected_stop, stdout);
 
     return 0;

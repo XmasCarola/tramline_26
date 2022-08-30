@@ -130,26 +130,26 @@ Boolean search_dept(struct parking_vector * ptr, char value[], int * phone_ptr, 
 int carpark() {
 
     char departments[4][20] = {"Economics", "Engineering","Linguistics", "Physics"};
-    int phone_numbers[] = { 579, 365, 148, 920 };
+    int phoneNumbers[] = {579, 365, 148, 920 };
     char plates[4][3][20] = {{"IT000XS", "DE334GH", "DK743YR"}, {"FI267BN", "NL890DQ", ""}, {"PT562NK", "SE881AB", ""}, {"ES264FU", "FR451ZT", "RO913EI"}};
     struct parking_vector Park;
-    struct parking_vector * park_ptr = &Park;
-    int S = 4, max_no_plates = 3, k, phone_ptr;
-    char plate_value[] = "NL890DQ";
+    struct parking_vector * parkPtr = &Park;
+    int S = 4, maxNoPlates = 3, k, phonePtr;
+    char plateValue[] = "NL890DQ";
     char * department;
 
     printf("\n--Car park--\n");
 
-    init_parking_vector(park_ptr, S);
-    create_vector_depts(park_ptr, plates, S, max_no_plates, phone_numbers);
+    init_parking_vector(parkPtr, S);
+    create_vector_depts(parkPtr, plates, S, maxNoPlates, phoneNumbers);
     for(k=0; k<S; k++) {
-        printf("\nPhone: %d", park_ptr->buffer[k].phone_number);
-        visit_plate(park_ptr->buffer[k].ptr);
+        printf("\nPhone: %d", parkPtr->buffer[k].phone_number);
+        visit_plate(parkPtr->buffer[k].ptr);
     }
-    if(search_dept(park_ptr, plate_value, &phone_ptr, &department, departments) == TRUE) {
+    if(search_dept(parkPtr, plateValue, &phonePtr, &department, departments) == TRUE) {
         printf("\nPlate admitted\n");
         printf("Department of %s\n", department);
-        printf("Please call: %d\n", phone_ptr);
+        printf("Please call: %d\n", phonePtr);
     } else
         printf("\nPlate rejected\n");
 
