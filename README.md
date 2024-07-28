@@ -1,4 +1,4 @@
-# Tramline 26
+# :railway_car: Tramline 26
 
 This repo contains a set of exercises where searching and ordering algorithms in C - including sequential sort, bubble sort, merge sort and quick sort - are applied.
 
